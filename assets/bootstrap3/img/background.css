@@ -1,0 +1,77 @@
+.bg-blend {
+	margin: 0;
+	padding: 0;
+	background-image: linear-gradient(125deg, #ffc048, #fff200, #ff5e57, #ffd32a, #ef5777, #ffa801, #fffa65, #ffd32a);
+	background-size: 400%;
+	animation: bganimation 15s infinite;
+	/* background-image: url('bglogin.jpg');
+	background-color: #ffc107;
+	background-blend-mode: luminosity;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center; */
+}
+
+.bg-model {
+	background-image: url('chefjuna.jpg');
+	background-position: center;
+	background-size: cover
+}
+
+.wave {
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	bottom: 0;
+	left: 0;
+	background: url('wave.png');
+	animation: animate 10s linear infinite;
+}
+
+.wave::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	top: 0;
+	left: 0;
+	opacity: 0.4;
+	background: url('wave.png');
+	animation: animate-reverse 10s linear infinite;
+
+}
+
+@keyframes animate {
+	0% {
+		background-position: 0;
+	}
+
+	100% {
+		background-position: 1360px;
+	}
+}
+
+@keyframes animate-reverse {
+	0% {
+		background-position: 1360px;
+	}
+
+	100% {
+		background-position: 0;
+	}
+}
+
+@keyframes bganimation {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 50% 0%;
+	}
+}
